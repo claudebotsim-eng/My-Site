@@ -1,0 +1,98 @@
+/* ── MARK ── */
+.logo-mark {
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.18));
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+.logo-mark:hover,
+a:hover .logo-mark {
+  filter: drop-shadow(0 4px 16px rgba(94,140,106,0.35));
+  transform: translateY(-1px);
+}
+
+/* ── HORIZONTAL LOCKUP ── */
+.logo-horizontal {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.logo-wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1;
+}
+
+.logo-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #2c2416;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  display: block;
+}
+.logo-name strong {
+  font-weight: 700;
+  color: #2a5c3a;
+}
+
+.logo-tag {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.56rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #a08870;
+  line-height: 1;
+  display: block;
+}
+
+/* ── LIGHT VARIANT ── */
+.logo-light .logo-name        { color: rgba(255,255,255,0.95); }
+.logo-light .logo-name strong  { color: #8fbd9a; }
+.logo-light .logo-tag          { color: rgba(255,255,255,0.4); }
+
+/* ── STACKED ── */
+.logo-stacked {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-wordmark-stacked {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  line-height: 1;
+}
+
+.logo-stacked .logo-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.92);
+  letter-spacing: 0.02em;
+  text-align: center;
+  display: block;
+}
+.logo-stacked .logo-name strong {
+  font-weight: 700;
+  color: #8fbd9a;
+}
+.logo-stacked .logo-tag {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.52rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.32);
+  text-align: center;
+  display: block;
+}

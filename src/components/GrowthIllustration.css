@@ -1,0 +1,91 @@
+.growth-illustration {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  filter: drop-shadow(0 12px 40px rgba(94,140,106,0.18));
+}
+.growth-illustration svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* TRUNK grows up */
+.trunk {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: growLine 1.2s cubic-bezier(0.4,0,0.2,1) 0.3s forwards;
+}
+
+/* BRANCHES fan out */
+.branch {
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  animation: growLine 0.8s ease-out var(--d, 0.5s) forwards;
+}
+
+/* ROOTS spread down */
+.root-line {
+  stroke-dasharray: 80;
+  stroke-dashoffset: 80;
+  animation: growLine 0.7s ease-out var(--d, 0.3s) forwards;
+}
+
+@keyframes growLine {
+  to { stroke-dashoffset: 0; }
+}
+
+/* LEAVES pop in */
+.leaf {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  transform: scale(0);
+  animation: leafPop 0.5s cubic-bezier(0.34,1.56,0.64,1) var(--d, 0.8s) forwards;
+}
+
+@keyframes leafPop {
+  to { opacity: 0.9; transform: scale(1); }
+}
+
+/* SEED pulse */
+.seed {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: seedPulse 2.5s ease-in-out 0s infinite;
+}
+@keyframes seedPulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+}
+
+/* GROWTH RINGS expand out */
+.ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ringExpand 2s ease-out var(--d, 0s) infinite;
+}
+@keyframes ringExpand {
+  0% { transform: scale(0.5); opacity: 0.6; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* LIGHT RAYS pulse */
+.ray {
+  opacity: 0;
+  animation: rayFade 2s ease-in-out var(--d, 0s) infinite;
+}
+@keyframes rayFade {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 0.22; }
+}
+
+/* PARTICLES float up */
+.particle {
+  animation: floatUp var(--dur, 2.5s) ease-in-out var(--d, 0s) infinite;
+}
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 0.5; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(-18px); opacity: 0; }
+}
